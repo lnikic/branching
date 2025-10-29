@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         int x = 2;
@@ -38,5 +40,26 @@ public class Main {
                 System.out.println("There'll be no green bottles, hanging on the wall");
             }
         }
+
+        String[] listOne = {"agnostic", "opinionated","voice activated", "haptically driven",
+                "extensible","reactive", "agent based", "functional", "AI enabled","strongly typed"};
+
+        String[] listTwo = {"loosely coupled", "six sigma","asynchronous", "event driven", "pub-sub",
+                "IoT", "cloudnative", "service oriented", "containerized", "serverless","microservices",
+                "distributed ledger"};
+        String[] listThree = {"framework", "library","DSL", "REST API", "repository", "pipeline", "servicemesh",
+                "architecture", "perspective", "design","orientation"};
+
+        int lengthOne = listOne.length;
+        int lengthTwo = listTwo.length;
+        int lengthThree = listThree.length;
+
+        Random randomGenerator = new Random();
+        int rand1 = randomGenerator.nextInt(lengthOne);
+        int rand2 = randomGenerator.nextInt(lengthTwo);
+        int rand3 = randomGenerator.nextInt(lengthThree);
+
+        String phrase = listOne[rand1] + " " + listTwo[rand2] + " " + listThree[rand3];
+        System.out.println("What we need is a " + phrase);
     }
 }
