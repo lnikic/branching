@@ -53,6 +53,7 @@ public class Main {
         int lengthOne = listOne.length;
         int lengthTwo = listTwo.length;
         int lengthThree = listThree.length;
+        System.out.println(lengthOne);
 
         Random randomGenerator = new Random();
         int rand1 = randomGenerator.nextInt(lengthOne);
@@ -61,5 +62,22 @@ public class Main {
 
         String phrase = listOne[rand1] + " " + listTwo[rand2] + " " + listThree[rand3];
         System.out.println("What we need is a " + phrase);
+
+        int p = 3;
+        while (p > 0) {
+            if( p > 2){
+                System.out.print("a");
+            }
+            p = p - 1;
+            System.out.print("-");
+
+            if( p == 2){
+                System.out.print("b c");
+            }
+            if( p == 1){
+                System.out.print("d");
+                p = p - 1;
+            }
+        }
     }
 }
